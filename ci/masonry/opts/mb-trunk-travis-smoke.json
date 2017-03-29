@@ -1,0 +1,20 @@
+{"bootstrap_visit":
+ {"version": "trunk",
+ "build_types": ["release"],
+ "arch":   "travis",
+ "make_nthreads": 8, 
+ "svn": {"mode":"anon"},
+ "build_visit":  { "cmake_ver": "3.0.2",
+                    "args":"--no-thirdparty",
+                    "comments": "setup for travis ci smoke testing",
+          "libs":["cmake",
+                  "python",
+                  "vtk",
+                  "qt",
+                  "qwt",
+                  "hdf5",
+                  "silo",
+                  "szip",
+                  "zlib",
+                  "mpich"]}
+}}

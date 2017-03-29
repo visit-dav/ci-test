@@ -1,0 +1,23 @@
+sudo: false
+
+language: cpp
+compiler:
+  - gcc
+env:
+  global:
+    - TRAVIS_HOME=`pwd`/..
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+       - gfortran
+script:
+  - python ci/masonry/bootstrap_visit.py ci/masonry/opts/mb-trunk-travis-smoke.json
+
+notifications:
+  email:
+    recipients:
+      - cyrush@llnl.gov
+    on_success: always
+    on_failure: always
