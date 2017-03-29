@@ -13,7 +13,7 @@ addons:
     packages:
        - gfortran
 script:
-  - python ci/masonry/bootstrap_visit.py ci/masonry/opts/mb-trunk-travis-smoke.json
+  - cd ci && travis-build.sh
 
 notifications:
   email:
