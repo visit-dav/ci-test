@@ -1,0 +1,1 @@
+python masonry/bootstrap_visit.py masonry/opts/mb-trunk-travis-smoke.json
