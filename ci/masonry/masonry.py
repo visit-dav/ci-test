@@ -309,10 +309,10 @@ class ShellAction(Action):
             print "[chdir to: %s]" % self.params["working_dir"]
             os.chdir(self.params["working_dir"])
             rcode, rout = sexe(self.params["cmd"],
-                               ret_output=True,
+                               #ret_output=True,
                                echo=True,
                                env=env)
-            res["action"]["output"] = rout
+            #res["action"]["output"] = rout
             res["action"]["return_code"]  = rcode
         except KeyboardInterrupt as e:
             res["action"]["error"] = "shell command interrupted by user (ctrl-c)"
