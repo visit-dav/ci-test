@@ -13,6 +13,7 @@ before_build:
   - mkdir windowsbuild
   - ps: cd windowsbuild 
   - svn co http://visit.ilight.com/svn/visit/trunk/windowsbuild/MSVC2013-x64/
+  - svn co http://visit.ilight.com/svn/visit/trunk/windowsbuild/distribution/
   - ps: cd .. 
   - svn co http://visit.ilight.com/svn/visit/trunk/src/
   # configure
