@@ -13,7 +13,7 @@ addons:
     packages:
        - gfortran
 script:
-  - cd ci && travis-build.sh
+  - cd ci && ./travis-build.sh
 
 notifications:
   email:
