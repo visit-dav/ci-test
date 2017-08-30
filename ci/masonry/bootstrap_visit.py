@@ -123,7 +123,7 @@ def steps_bv(opts,ctx):
                                      svn_cmd="co",
                                      description="checkout build_visit",
                                      working_dir=bv_working)
-    bv_args = " --console "
+    bv_args = ""
     if opts["build_visit"].has_key("make_flags"):
         bv_args    += " --makeflags '%s'" % opts["build_visit"]["make_flags"]
     elif opts.has_key("make_nthreads"):
@@ -331,9 +331,10 @@ def main(opts_json):
     opts = load_opts(opts_json)
     ctx = Context()
     steps_visit(opts,ctx)
-    ctx.fire("build")
-    return ctx
+    return ctx.fire("build")
 
 
 if __name__ == "__main__":
-    ctx = main(sys.argv[1])
+    # don't forward return code, so we can launch log viewer regardless
+    res = main(sys.argv[1])
+    
